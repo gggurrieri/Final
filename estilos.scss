@@ -4,6 +4,20 @@ $colorhover: #5873FF;
 $colorhover2: #ff2bc2;
 $colortextos: #fff;
 
+/* MAPS*/
+$headings: (
+    h1: 75px,
+    h2: 60px,
+    h3: 28px,
+    h4: 20px,
+);
+
+$h1: map-get($headings, h1);
+$h2: map-get($headings, h2);
+$h3: map-get($headings, h3);
+$h4: map-get($headings, h4);
+/* MAPS*/
+
 html{
     scroll-behavior: smooth;
 }
@@ -59,7 +73,7 @@ body {
     padding-top: 0;
     padding: 0;
     h1{
-        font-size: 55px;
+        font-size: $h1;
         padding-top: 20%;
         padding-left: 20px;
     } 
@@ -76,6 +90,8 @@ body {
         0 0 20px $colorhover;
     }
 }
+
+
 
 .mouse{
     width:25px;
@@ -119,7 +135,7 @@ body {
     padding: 0;
     h2{
         font-family: "Rubik",sans-serif;
-        font-size: 50px;
+        font-size: $h2;
         color: $colortextos;
         text-align: center;
         padding-top: 10px;
@@ -158,12 +174,12 @@ footer{
         margin-bottom: 10px;   
         color: $colortextos;
     }
-    &:hover{
+    a:hover{
         color: $colorhover;
         text-decoration: none;
     }
-    .row h1{
-        font-size: 70px;
+    .row h2{
+        font-size: $h2;
         text-align: center;
     }
     hr{
@@ -172,8 +188,9 @@ footer{
         width: 50%;
         margin-left: 0;
     }
-    .mapa h4{
-        padding-top: 15px;
+    .mapa h3{
+        padding-top: 10px;
+        font-size: $h3;
     }
 }
     .items{
@@ -182,11 +199,12 @@ footer{
     }
         h3{
         padding-top: 10px;
-        font-size: 20px;
+        font-size: $h3;
         font-family: "Rubik",sans-serif;
     }
         h4{
-        padding-top: 15px;
+        padding-top: 10px;
+        font-size: $h4;
     }
         input{
         width: 50%;
@@ -195,25 +213,33 @@ footer{
         padding-left: 10px;
         border-radius: 5px;
     }
-        .boton{
-        background-color: #5873FF;
-        height: 30px;
-        border-radius: 2px;
-        color: $colortextos;
-        margin-top: 10px;
-        font-size: 15px;
-    }
-    &:hover{
-        transition: 0.5s;
-        box-shadow:
-        0 0 20px $colorhover;
-        color: #242a45;
-        width: 120px;
-    }
 }
+
+/*EXTEND*/
+.boton{
+    @extend .btn;
+    margin-left: 0;
+}
+/*EXTEND*/
+
+/*.boton{
+    background-color: #5873FF;
+    height: 30px;
+    border-radius: 2px;
+    color: $colortextos;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.boton:hover{
+    transition: 0.5s;
+    box-shadow:
+    0 0 20px $colorhover;
+    color: $colortextos;
+}*/
+
     .footer-copyright{
         background-color: #242a45;
-        p{
+        .p{
             color: $colortextos;
         }
     }
@@ -221,12 +247,11 @@ footer{
         padding-left: 20px;
     }
 
-
 /* FIN FOOTER*/
 
 /* INICIO Que es UOPI*/
 .inicio h2{
-    font-size: 55px;
+    font-size: $h2;
     padding: 70px;
     font-family: "Rubik",sans-serif;
     text-align: center;
@@ -246,23 +271,44 @@ footer{
     background-color: #051829;
 }
 
-.boxs{
+/* @MIXIN*/
+@mixin cajas {
     border-bottom: 1px solid #242a45;
     border-top: 1px solid #242a45;
-    height: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.cajauopi-1{
+    @include cajas;
+}
+
+.cajauopi-2{
+    @include cajas;
+}
+
+.cajauopi-3{
+    @include cajas;
+}
+
+.cajauopi-4{
+    @include cajas;
+}
+/* @MIXIN*/
+
 
 .cajas1 p{
     width: 100%;
     font-size: 25px;
     font-family: "Rubik",sans-serif;
     color: $colortextos;
-    padding-top: 20%;
 }
 
 .imgq {
     width: 70%;
-    padding: 50px;
+    padding: 0;
 }
 /* FIN Que es UOPI*/
 
@@ -398,7 +444,7 @@ ul {
 
 .acajas h2{
     color: $colortextos;
-    font-size: 30px;
+    font-size: $h2;
     font-family: "Rubik",sans-serif;
     
 }
@@ -413,7 +459,7 @@ ul {
         padding-top: 70px;
         padding-bottom: 30px;
         color: $colortextos;
-        font-size: 50px;
+        font-size: $h2;
         font-family: "Rubik",sans-serif;
     }
     
@@ -443,7 +489,7 @@ ul {
 }
 
 .prot h2{
-    font-size: 30px;
+    font-size: $h2;
     font-family: "rubik",sans-serif;
     color: $colortextos;
     padding-bottom: 20px;

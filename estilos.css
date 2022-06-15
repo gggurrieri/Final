@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Rubik:wght@300&display=swap");
+/* MAPS*/
+/* MAPS*/
 html {
   scroll-behavior: smooth;
 }
@@ -38,7 +40,8 @@ body .navbar li:last-child:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: -1;
   opacity: 0.3;
   background-color: #000000;
@@ -56,17 +59,17 @@ body .navbar li:last-child:hover {
   padding: 0;
 }
 .jumbotron h1 {
-  font-size: 55px;
+  font-size: 75px;
   padding-top: 20%;
   padding-left: 20px;
 }
 
-.btn {
+.btn, .boton {
   background-color: #5873FF;
   margin: 20px;
   color: #fff;
 }
-.btn:hover {
+.btn:hover, .boton:hover {
   transition: 0.5s;
   box-shadow: 0 0 20px #5873FF;
 }
@@ -87,7 +90,19 @@ body .navbar li:last-child:hover {
   background-color: #fff;
   border-radius: 50%;
   margin: auto;
-  animation: move-wheel 1s linear infinite;
+  -webkit-animation: move-wheel 1s linear infinite;
+          animation: move-wheel 1s linear infinite;
+}
+
+@-webkit-keyframes move-wheel {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(1rem);
+  }
 }
 
 @keyframes move-wheel {
@@ -109,7 +124,7 @@ body .navbar li:last-child:hover {
 }
 .transito h2 {
   font-family: "Rubik", sans-serif;
-  font-size: 50px;
+  font-size: 60px;
   color: #fff;
   text-align: center;
   padding-top: 10px;
@@ -148,12 +163,12 @@ footer a {
   margin-bottom: 10px;
   color: #fff;
 }
-footer:hover {
+footer a:hover {
   color: #5873FF;
   text-decoration: none;
 }
-footer .row h1 {
-  font-size: 70px;
+footer .row h2 {
+  font-size: 60px;
   text-align: center;
 }
 footer hr {
@@ -162,8 +177,9 @@ footer hr {
   width: 50%;
   margin-left: 0;
 }
-footer .mapa h4 {
-  padding-top: 15px;
+footer .mapa h3 {
+  padding-top: 10px;
+  font-size: 28px;
 }
 
 .items img {
@@ -171,11 +187,12 @@ footer .mapa h4 {
 }
 .items h3 {
   padding-top: 10px;
-  font-size: 20px;
+  font-size: 28px;
   font-family: "Rubik", sans-serif;
 }
 .items h4 {
-  padding-top: 15px;
+  padding-top: 10px;
+  font-size: 20px;
 }
 .items input {
   width: 50%;
@@ -184,25 +201,31 @@ footer .mapa h4 {
   padding-left: 10px;
   border-radius: 5px;
 }
-.items .boton {
-  background-color: #5873FF;
-  height: 30px;
-  border-radius: 2px;
-  color: #fff;
-  margin-top: 10px;
-  font-size: 15px;
-}
-.items:hover {
-  transition: 0.5s;
-  box-shadow: 0 0 20px #5873FF;
-  color: #242a45;
-  width: 120px;
+
+/*EXTEND*/
+.boton {
+  margin-left: 0;
 }
 
+/*EXTEND*/
+/*.boton{
+    background-color: #5873FF;
+    height: 30px;
+    border-radius: 2px;
+    color: $colortextos;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.boton:hover{
+    transition: 0.5s;
+    box-shadow:
+    0 0 20px $colorhover;
+    color: $colortextos;
+}*/
 .footer-copyright {
   background-color: #242a45;
 }
-.footer-copyright p {
+.footer-copyright .p {
   color: #fff;
 }
 
@@ -213,7 +236,7 @@ footer .mapa h4 {
 /* FIN FOOTER*/
 /* INICIO Que es UOPI*/
 .inicio h2 {
-  font-size: 55px;
+  font-size: 60px;
   padding: 70px;
   font-family: "Rubik", sans-serif;
   text-align: center;
@@ -233,23 +256,54 @@ footer .mapa h4 {
   background-color: #051829;
 }
 
-.boxs {
+/* @MIXIN*/
+.cajauopi-1 {
   border-bottom: 1px solid #242a45;
   border-top: 1px solid #242a45;
-  height: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.cajauopi-2 {
+  border-bottom: 1px solid #242a45;
+  border-top: 1px solid #242a45;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cajauopi-3 {
+  border-bottom: 1px solid #242a45;
+  border-top: 1px solid #242a45;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cajauopi-4 {
+  border-bottom: 1px solid #242a45;
+  border-top: 1px solid #242a45;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* @MIXIN*/
 .cajas1 p {
   width: 100%;
   font-size: 25px;
   font-family: "Rubik", sans-serif;
   color: #fff;
-  padding-top: 20%;
 }
 
 .imgq {
   width: 70%;
-  padding: 50px;
+  padding: 0;
 }
 
 /* FIN Que es UOPI*/
@@ -380,7 +434,7 @@ ul {
 
 .acajas h2 {
   color: #fff;
-  font-size: 30px;
+  font-size: 60px;
   font-family: "Rubik", sans-serif;
 }
 
@@ -393,7 +447,7 @@ ul {
   padding-top: 70px;
   padding-bottom: 30px;
   color: #fff;
-  font-size: 50px;
+  font-size: 60px;
   font-family: "Rubik", sans-serif;
 }
 
@@ -415,7 +469,7 @@ ul {
 }
 
 .prot h2 {
-  font-size: 30px;
+  font-size: 60px;
   font-family: "rubik", sans-serif;
   color: #fff;
   padding-bottom: 20px;
@@ -460,6 +514,4 @@ ul {
   font-size: 25px;
 }
 
-/* FIN REPORTE */
-
-/*# sourceMappingURL=estilos.css.map */
+/* FIN REPORTE *//*# sourceMappingURL=estilos.css.map */
