@@ -1,13 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
 $colorbgfoot: #0a141d;
 $colorhover: #5873FF;
 $colorhover2: #ff2bc2;
 $colortextos: #fff;
 
+:root {
+    --violet: #5873FF;
+    --aqua: #00fbff;
+    --pink: #ff2bc2;
+}
+
+
 /* MAPS*/
 $headings: (
-    h1: 75px,
-    h2: 60px,
+    h1: 60px,
+    h2: 45px,
     h3: 28px,
     h4: 20px,
 );
@@ -58,26 +66,42 @@ body {
     height:100%;
     object-fit:cover;
     z-index: -1;
-    opacity: 0.3;
-    background-color: #000000;
+    
 }
 
-.jumbotron{
-    background: none;
-    color: $colortextos;
-    font-family: "Rubik",sans-serif;
-    height: 100%;
-    text-shadow: 0.5px 0.5px 5px white;
-    margin-bottom: 0;
-    border-radius: 0;
-    padding-top: 0;
-    padding: 0;
-    h1{
-        font-size: $h1;
-        padding-top: 20%;
-        padding-left: 20px;
-    } 
+
+
+
+.gradient-text {
+    background-image: linear-gradient(90deg, var(--violet), var(--aqua)50%, var(--violet) 75%);
+    background-color: $colortextos;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-size: $h1;
+    padding-top: 20%;
+    padding-left: 20px;
+    font-family:"rubik",sans-serif;
+    animation: gradient 5s linear infinite;
+    background-repeat: repeat;
 }
+
+
+  
+@keyframes gradient {
+    0% {
+    background-position: 0 0;
+    }
+
+    50% {
+    background-position: -80rem 0;
+    }
+    100% {
+    background-position: 0 0;
+    }
+}
+
 
 
 .btn{
@@ -100,7 +124,7 @@ body {
     border-radius:20px;
     display:flex;
     margin-left: 50%;
-    margin-top: 200px;
+    margin-top: 150px;
     .mouse-wheel{
         display:block;
         width:10px;
@@ -127,7 +151,9 @@ body {
 /* INICIO HOME PRINCIPAL*/
 
 /* INICIO MEDIO*/
-
+.contenedor-waves{
+    margin-top: -60px;
+}
 
 .transito{
     height: 150px;
@@ -168,6 +194,7 @@ footer{
     color: $colortextos;
     font-family: "Rubik",sans-serif;
     background-color: $colorbgfoot;
+    
     a{
         font-size: 15px;
         font-family: "rubik", sans-serif;
@@ -222,20 +249,7 @@ footer{
 }
 /*EXTEND*/
 
-/*.boton{
-    background-color: #5873FF;
-    height: 30px;
-    border-radius: 2px;
-    color: $colortextos;
-    margin-top: 10px;
-    font-size: 15px;
-}
-.boton:hover{
-    transition: 0.5s;
-    box-shadow:
-    0 0 20px $colorhover;
-    color: $colortextos;
-}*/
+
 
     .footer-copyright{
         background-color: #242a45;
@@ -250,8 +264,8 @@ footer{
 /* FIN FOOTER*/
 
 /* INICIO Que es UOPI*/
-.inicio h2{
-    font-size: $h2;
+.inicio h1{
+    font-size: $h1;
     padding: 70px;
     font-family: "Rubik",sans-serif;
     text-align: center;
@@ -275,10 +289,11 @@ footer{
 @mixin cajas {
     border-bottom: 1px solid #242a45;
     border-top: 1px solid #242a45;
-    height: 600px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 .cajauopi-1{
@@ -299,16 +314,22 @@ footer{
 /* @MIXIN*/
 
 
-.cajas1 p{
+.box2 p{
     width: 100%;
     font-size: 25px;
     font-family: "Rubik",sans-serif;
     color: $colortextos;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 
 .imgq {
-    width: 70%;
-    padding: 0;
+    width: 500px;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
 }
 /* FIN Que es UOPI*/
 
@@ -406,12 +427,13 @@ ul {
     display: grid;
 }
 
-/* CONTACT INFO */
+
 .contact-info {
     background: linear-gradient(#0a141d,#5873FF) ;
 }
+/* FIN CONTACTO */
 
-
+/* INICIO ACERCA DE MI */
 .acajas{
     width: 100%;
     height: 100%;
@@ -446,8 +468,15 @@ ul {
     color: $colortextos;
     font-size: $h2;
     font-family: "Rubik",sans-serif;
-    
 }
+
+.acajas h3{
+    color: $colortextos;
+    font-size: $h3;
+    font-family: "Rubik",sans-serif;
+}
+
+/* FIN ACERCA DE MI */
 
 /* INICIO REPORTE */
 .reporte{
