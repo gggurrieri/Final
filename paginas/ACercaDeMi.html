@@ -15,6 +15,7 @@
     <title>UOPI</title>
 </head>
 <body>
+    
     <!-- Inicia Barra de navegacion -->
     <nav class="navbar navbar-expand-md navbar-dark nav">
         <!-- Brand -->
@@ -46,21 +47,43 @@
     </nav>
     <!-- Fin Barra de navegacion -->
 
-    <div class="container-fluid acajas acajas1">
-        <div class="row aboxs">
-            <div class="foto col-lg-12 col-md-12 col-sm-12">
-                <h2 class="text-center"> <strong>Gabriel Gurrieri </strong> </h2>
-                <img class="img-fluid imga" src="../imagenes/yo.png" alt="">
-            </div>
-            <div class="box2  col-md-12 col-sm-12">
-                
-                <p class="text-fluid"> Sabemos lo dificil que es encontrar lugar para estacionar en Capital Federal. Es por eso que se me ocurrio crear una solucion a este problema ¿Porqué no crear una comunidad donde nos ayudemos entre todos a buscar o avisar donde hay lugares libres <strong>sin costo y seguros</strong> para dejar nuestro vehiculo dentro de las zonas mas concurridas? <br>
-                Asi nació <strong>UOPI</strong>. <h3 class="text-center">Bienvenidos!</h3> 
-                </p>
-            </div>
+    
+
+    
+<div id="curve" class="card">
+    <div class="footer">
+        <div class="connections">
+            <div class="connection github"><div class="icon"></div></div>
+            <div class="connection twitter"><div class="icon"></div></div>
+            <div class="connection behance"><div class="icon"></div></div>
+        </div>
+        <svg id="curve">
+            <path id="p" d="M0,200 Q80,100 400,200 V150 H0 V50" transform="translate(0 300)" />
+            <rect id="dummyRect" x="0" y="0" height="450" width="400"
+		  fill="transparent" />
+            <!-- slide up-->
+            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,100 400,50 V150 H0 V50" fill="freeze" begin="dummyRect.mouseover" end="dummyRect.mouseout" dur="0.1s" id="bounce1" />
+            <!-- slide up and curve in -->
+            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,0 400,50 V150 H0 V50" fill="freeze" begin="bounce1.end" end="dummyRect.mouseout" dur="0.15s" id="bounce2" />
+            <!-- slide down and curve in -->
+            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,80 400,50 V150 H0 V50" fill="freeze" begin="bounce2.end" end="dummyRect.mouseout" dur="0.15s" id="bounce3" />
+            <!-- slide down and curve out -->
+            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,45 400,50 V150 H0 V50" fill="freeze" begin="bounce3.end" end="dummyRect.mouseout" dur="0.1s" id="bounce4" />
+            <!-- curve in -->
+            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,50 400,50 V150 H0 V50" fill="freeze" begin="bounce4.end" end="dummyRect.mouseout" dur="0.05s" id="bounce5" />
+
+            <animate xlink:href="#p" attributeName="d" to="M0,200 Q80,100 400,200 V150 H0 V50" fill="freeze" begin="dummyRect.mouseout" dur="0.15s" id="bounceOut" />
+        </svg>
+        <div class="info">
+            <div class="name">Gabriel Gurrieri</div>
+            <div class="job">Desarrollador Web</div>
         </div>
     </div>
-
+    <div class="card-blur"></div>
+</div>
+<div class="falta text-center text-fluid">
+<h1>FALTA DISEñO!!</h1>
+</div>
     <!-- Inicio footer -->
     <footer>
         <div class="container-fluid foot pt-5">
@@ -109,8 +132,8 @@
                 <div class="footer-copyright text-center py-3 col-md-12">
                     <p class="text-center">© 2022 Copyright: Gabriel Gurrieri - UOPI</p> 
                 </div>
-    </div>
-</div>
+            </div>
+        </div>
     
 <!-- Copyright -->
 <a class="gotoup" href="#"><i class="fa-solid fa-angles-up"></i></a>

@@ -8,11 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Este sitio web fue pensado para mostrar el diseño y funcionamiento de mi App para encontrar lugares libres para estacionar">
     <meta name="keywords" content="PARKING, ESTACIONAMIENTO, TRAFICO, GARAGE, AUTOS, COMUNIDAD">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    
     <title>UOPI</title>
+   
 </head>
 
 <body>
@@ -47,52 +51,69 @@
     </nav>
     <!-- Fin Barra de navegacion -->
     <!-- Inicio QMedio -->
-    <div class="inicio">
-        <h1 class="text-fluid text-center">Se parte de esta comunidad</h1>
-            <p class="text-center">Con UOPI vas a poder anunciar o encontrar espacios vacios para poder estacionar tu vehiculo en la calle, sin tener que pagar garage.</p>
+    <div class="jumbotron">
+        <h1 data-aos="fade-down" class="display-4 text-fluid">Se parte de esta comunidad</h1>
+        <hr class="my-4">
+        <p data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="500" class="text-fluid">Con UOPI vas a poder anunciar o encontrar espacios vacios para poder estacionar tu vehiculo en la calle, sin tener que pagar garage.</p>
     </div>
-    <div class="container-fluid cajas cajas1 cajauopi-1">
-        <div class="row boxs">
-            <div class="box1 col-md-6 col-sm-12">
-                <img class="img-fluid imgq" src="../imagenes/undraw_active_support_re_b7sj (1).svg" alt="">
+    <div  class="smartphone-mockup ">
+        
+        <div data-aos="fade-right" data-aos-duration="500"  class="row smartphone-mockup__container col-sm-12 col-md-12 col-lg-6 ">
+            <div  class="smartphone-mockup__content iphone-white smartphone-mockup__slider" >
+                <img src="../imagenes/funcionamiento.gif" class=" img-fluid smartphone-mockup__screen-img lazyloaded" alt="" data-ll-status="loaded">            							
+            </div>
+
+            <img class="img-fluid smartphone-mockup__image lazyloaded" src="../imagenes/iphone.png" alt="iphone-white" data-ll-status="loaded">
+                <noscript><img class="img-fluid smartphone-mockup__image" src="../imagenes/iphone.png" alt="iphone-white" /></noscript>
+        </div>  
+    </div>
+ 
+
+<div class="boxs">
+    <div class="container-fluid cajas  cajauopi-1">
+        <div class="row">
+            <div class=" box1 col-md-6 col-sm-12">
+                <img data-aos="fade-right" class="img-fluid imgq mx-auto d-block " src="../imagenes/undraw_active_support_re_b7sj (1).svg" alt="">
             </div>
             <div class="box2 col-md-6 col-sm-12">
-                <p class="text-center">Crea tu usuario ingresando tus datos personales,
+                <p data-aos="fade-right"  class="text-center">Crea tu usuario ingresando tus datos personales,
                     Ingresa los datos de tu vehiculo (patente, tamaño y color)</p>
             </div>
         </div>
     </div>
-    <div class="container-fluid cajas cajas1 cajauopi-2">
-        <div class="row boxs">
+    <div  class="container-fluid cajas cajas1 cajauopi-2">
+        <div class="row ">
             <div class=" box2 col-md-6 col-sm-12">
-                <p class="text-center">Activá tu geolocalización para dar aviso o encontrar un lugar disponible para estacionar</p>
+                <p data-aos="fade-right"class="text-center text-fluid" >Activá tu geolocalización para dar aviso o encontrar un lugar disponible para estacionar</p>
             </div>
             <div class="col-md-6 col-sm-12">
-                <img class="img-fluid imgq" src="../imagenes/undraw_my_location_re_r52x (1).svg" alt="">
+                <img data-aos="fade-right" class="img-fluid imgq mx-auto d-block" src="../imagenes/undraw_my_location_re_r52x (1).svg" alt="">
             </div>
         </div>
     </div>
     <div class="container-fluid cajas cajas1 cajauopi-3">
-        <div class="row boxs">
-            <div class="box2 col-md-6 col-sm-12">
-                <img class="img-fluid imgq" src="../imagenes/undraw_order_a_car_-3-tww.svg" alt="">
+        <div class="row">
+            <div  class="box2 col-md-6 col-sm-12">
+                <img data-aos="fade-right" class="img-fluid imgq mx-auto d-block" src="../imagenes/undraw_order_a_car_-3-tww.svg" alt="">
             </div>
-            <div class="box2 col-md-6 col-sm-12">
-                <p class="text-center">Una vez que elegiste el lugar a ocupar, UOPI te va a llevar al lugar seleccionado.</p>
+            <div  class="box2 col-md-6 col-sm-12">
+                <p data-aos="fade-right" class="text-center">Una vez que elegiste el lugar a ocupar, UOPI te va a llevar al lugar seleccionado.</p>
             </div>
         </div>
     </div>
     <div class="container-fluid cajas cajas1 cajauopi-4">
-        <div class="row boxs">
-            <div class="box2 col-md-6 col-sm-12">
-                <p class="text-center">Listo, estacionaste! ahora ya podes calificar y comentar tu experiencia para el próximo conductor.</p>  
+        <div class="row ">
+            <div  class="box2 col-md-6 col-sm-12">
+                <p data-aos="fade-right" class="text-center">Listo, estacionaste! ahora ya podes calificar y comentar tu experiencia para el próximo conductor.</p>  
             </div>
-            <div class="col-md-6 col-sm-12">
-                <img class="img-fluid imgq" src="../imagenes/undraw_reviews_lp8w.svg" alt="">
+            <div  class="col-md-6 col-sm-12">
+                <img data-aos="fade-right" class="img-fluid imgq mx-auto d-block" src="../imagenes/undraw_reviews_lp8w.svg" alt="">
             </div>
         </div>
     </div>
-
+</div>
 
 
 
@@ -155,6 +176,10 @@
     </footer>
 
     <!-- Fin footer -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <script>
+ AOS.init();
+ </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
@@ -164,6 +189,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
     </script>
+
 </body>
 
 </html>
