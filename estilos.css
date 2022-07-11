@@ -109,7 +109,7 @@ body .navbar li:last-child:hover {
   border-radius: 20px;
   display: flex;
   margin-left: 50%;
-  margin-top: 140px;
+  margin-top: 110px;
 }
 .mouse .mouse-wheel {
   display: block;
@@ -147,7 +147,7 @@ body .navbar li:last-child:hover {
 /* INICIO MEDIO*/
 .contenedor-waves {
   height: 100%;
-  margin-top: -70px;
+  margin-top: -40px;
 }
 
 .transito {
@@ -592,7 +592,7 @@ ul {
   padding-top: 120px;
   color: #665DFE;
   font-family: "rubik", sans-serif;
-  font-size: 60px;
+  font-size: 55px;
 }
 
 @-webkit-keyframes cambiar {
