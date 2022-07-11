@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 :root {
-  --violet: #5873FF;
-  --aqua: #00fbff;
-  --pink: #ff2bc2;
+  --violet: #665DFE;
+  --aqua: #3ACCE1;
+  --pink: #FE4F9A;
 }
 
 /* MAPS*/
@@ -28,14 +28,14 @@ body .navbar li {
   margin-right: 1.5rem;
 }
 body .navbar li:last-child {
-  background-color: #5873FF;
-  border: 2px solid #5873FF;
+  background-color: #665DFE;
+  border: 2px solid #665DFE;
   border-radius: 0.2rem;
 }
 body .navbar li:last-child:hover {
   background: transparent;
-  border: 2px solid #5873FF;
-  box-shadow: 0 0 50px #5873FF;
+  border: 2px solid #665DFE;
+  box-shadow: 0 0 50px #665DFE;
   transform: translate(10px);
   transition: 1.3s;
 }
@@ -61,7 +61,7 @@ body .navbar li:last-child:hover {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   font-size: 60px;
-  padding-top: 20%;
+  padding-top: 280px;
   padding-left: 20px;
   font-family: "rubik", sans-serif;
   -webkit-animation: gradient 5s linear infinite;
@@ -93,13 +93,13 @@ body .navbar li:last-child:hover {
   }
 }
 .btn, .boton {
-  background-color: #5873FF;
+  background: linear-gradient(#3ACCE1, #665DFE);
   margin: 20px;
-  color: #fff;
+  color: #222222;
 }
 .btn:hover, .boton:hover {
   transition: 0.5s;
-  box-shadow: 0 0 20px #5873FF;
+  box-shadow: 0 0 20px #665DFE;
 }
 
 .mouse {
@@ -109,7 +109,7 @@ body .navbar li:last-child:hover {
   border-radius: 20px;
   display: flex;
   margin-left: 50%;
-  margin-top: 150px;
+  margin-top: 140px;
 }
 .mouse .mouse-wheel {
   display: block;
@@ -146,11 +146,12 @@ body .navbar li:last-child:hover {
 /* INICIO HOME PRINCIPAL*/
 /* INICIO MEDIO*/
 .contenedor-waves {
-  margin-top: -10%;
+  height: 100%;
+  margin-top: -70px;
 }
 
 .transito {
-  height: 150px;
+  height: 70px;
   background-color: #242a45;
   padding: 0;
 }
@@ -166,20 +167,23 @@ body .navbar li:last-child:hover {
   width: 100%;
   background-color: #242a45;
 }
-.medio .row {
+.medio .columnas {
   height: 400px;
+  margin: 0;
 }
 .medio .cleft {
   padding: 10px;
 }
 .medio .twitter-timeline {
   border-radius: 10px;
+  height: 400px;
 }
 .medio .cright {
   padding: 10px;
 }
 .medio .waze {
   border-radius: 10px;
+  height: 400px;
 }
 
 /* FIN MEDIO*/
@@ -196,7 +200,7 @@ footer a {
   color: #fff;
 }
 footer a:hover {
-  color: #5873FF;
+  color: #665DFE;
   text-decoration: none;
 }
 footer .row h2 {
@@ -237,6 +241,8 @@ footer .mapa h3 {
 /*EXTEND*/
 .boton {
   margin-left: 0;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 /*EXTEND*/
@@ -255,26 +261,35 @@ footer .mapa h3 {
 /* INICIO Que es UOPI*/
 .jumbotron {
   background-color: #0a141d;
+  background-image: url(./imagenes/Buenos\ Aires.png);
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
   width: 100%;
-  height: 700px;
+  height: 100%;
   margin: 0;
   border-radius: 0;
-  padding: 0;
+  padding-bottom: 350px;
 }
 .jumbotron h1 {
   font-size: 60px;
   font-family: "rubik", sans-serif;
   color: #fff;
   text-align: center;
-  padding-top: 15%;
+  padding-top: 110px;
 }
 .jumbotron p {
   font-family: "rubik", sans-serif;
   color: #fff;
   text-align: center;
   font-size: 25px;
+  padding-top: 40px;
   padding-left: 20%;
   padding-right: 20%;
+}
+
+.box-uopi {
+  width: 100%;
+  margin: 0;
 }
 
 .box2 {
@@ -334,6 +349,7 @@ footer .mapa h3 {
   background: #242a45;
   width: 100%;
   align-self: stretch;
+  height: 100%;
   align-content: center;
   justify-content: center;
   align-items: center;
@@ -382,13 +398,45 @@ footer .mapa h3 {
   height: 600px;
 }
 
-.box-derecha {
-  background-color: #5873FF;
+.box-uopi .cuadro-beneficio {
+  background: rgb(5, 24, 41);
+  background: linear-gradient(270deg, rgb(5, 24, 41) 0%, rgb(36, 42, 69) 100%);
+  height: 100%;
 }
-.box-derecha h2 {
-  font-size: 45px;
+
+.cuadro-beneficio h1 {
+  font-size: 50px;
+  font-family: "rubik", sans-serif;
   color: #fff;
-  font-family: "Rubik", sans-serif;
+  padding-top: 35px;
+  padding-bottom: 25px;
+}
+
+.cuadro-beneficio .emoji {
+  width: 150px;
+  font-size: 50px;
+  color: #ffffff;
+  padding: 30px;
+}
+
+.contenedor-q {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.textos p {
+  font-size: 16px;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.ahorro h3 {
+  font-size: 28px;
+  color: #fff;
 }
 
 .box-1 h3 {
@@ -429,7 +477,7 @@ ul {
 }
 
 .logos span {
-  color: #00fbff;
+  color: #3ACCE1;
 }
 
 .contact-wrapper {
@@ -473,11 +521,11 @@ ul {
   background: none;
   outline: 0;
   color: rgb(130, 130, 130);
-  border-bottom: 1px solid #00fbff;
+  border-bottom: 1px solid #3ACCE1;
 }
 
 .contact-form form button {
-  background: #6acbdf;
+  background: #3ACCE1;
   border: 0;
   text-transform: uppercase;
   padding: 1em;
@@ -485,7 +533,7 @@ ul {
 
 .contact-form form button:hover,
 .contact-form form button:focus {
-  background: #5873FF;
+  background: #665DFE;
   color: #fff;
   transition: background-color 1s ease-out;
   outline: 0;
@@ -497,39 +545,298 @@ ul {
 }
 
 .contact-info {
-  background: linear-gradient(#0a141d, #5873FF);
+  background: linear-gradient(#0a141d, #665DFE);
 }
 
 /* FIN CONTACTO */
 /* INICIO ACERCA DE MI */
-.acajas {
-  width: 100%;
+.contenedor-yo {
   height: 100%;
-  padding-top: 120px;
+  width: 100%;
   background-color: #051829;
 }
 
-.aboxs {
+.contenedor-texto {
+  height: 700px;
+}
+
+.contenedor-foto {
+  height: 700px;
+}
+
+.contenedor-texto .descripcion {
+  font-family: "rubik", sans-serif;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 20px;
+  line-height: 35px;
+}
+
+.contenedor-iam {
+  display: flex;
+  width: 100%;
+  height: 55px;
+  font-size: 40px;
+  font-family: "rubik", sans-serif;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.contenedor-texto ul {
+  -webkit-animation: cambiar 7s infinite;
+          animation: cambiar 7s infinite;
+}
+
+.contenedor-texto .iam p {
+  padding-top: 120px;
+  color: #665DFE;
+  font-family: "rubik", sans-serif;
+  font-size: 60px;
+}
+
+@-webkit-keyframes cambiar {
+  0% {
+    margin-top: 0;
+  }
+  20% {
+    margin-top: 0;
+  }
+  25% {
+    margin-top: -60px;
+  }
+  50% {
+    margin-top: -60px;
+  }
+  55% {
+    margin-top: -120px;
+  }
+  80% {
+    margin-top: -120px;
+  }
+  85% {
+    margin-top: -60px;
+  }
+  95% {
+    margin-top: -60px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes cambiar {
+  0% {
+    margin-top: 0;
+  }
+  20% {
+    margin-top: 0;
+  }
+  25% {
+    margin-top: -60px;
+  }
+  50% {
+    margin-top: -60px;
+  }
+  55% {
+    margin-top: -120px;
+  }
+  80% {
+    margin-top: -120px;
+  }
+  85% {
+    margin-top: -60px;
+  }
+  95% {
+    margin-top: -60px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+.card {
+  position: absolute;
+  border-radius: 8px;
+  height: 450px;
+  width: 380px;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 80px -10px black;
+  overflow: hidden;
+  border: solid 5px;
+  -o-border-image: linear-gradient(#665DFE, #3ACCE1, #FE4F9A) 1;
+     border-image: linear-gradient(#665DFE, #3ACCE1, #FE4F9A) 1;
+  -webkit-animation: rotate 2.5s ease-in infinite;
+          animation: rotate 2.5s ease-in infinite;
+}
+
+@-webkit-keyframes rotate {
+  50% {
+    border-image: linear-gradient(360deg, #665DFE, #3ACCE1, #FE4F9A) 1;
+  }
+}
+
+@keyframes rotate {
+  50% {
+    -o-border-image: linear-gradient(360deg, #665DFE, #3ACCE1, #FE4F9A) 1;
+       border-image: linear-gradient(360deg, #665DFE, #3ACCE1, #FE4F9A) 1;
+  }
+}
+.card-blur {
+  position: absolute;
   height: 100%;
+  width: calc(100% + 1px);
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.15s ease-in;
 }
 
-.acajas p {
-  color: #fff;
-  font-size: 20px;
-  font-family: "Rubik", sans-serif;
-  padding: 50px;
+.card:hover .card-blur {
+  opacity: 0.6;
 }
 
-.acajas h2 {
-  color: #fff;
-  font-size: 45px;
-  font-family: "Rubik", sans-serif;
+.footer {
+  z-index: 1;
+  position: absolute;
+  height: 80px;
+  width: 100%;
+  bottom: 0;
 }
 
-.acajas h3 {
+svg#curve {
+  position: absolute;
+  fill: #665DFE;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  height: 450px;
+}
+
+.connections {
+  height: 80px;
+  width: 400px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  margin: auto;
+}
+
+.connection {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background: linear-gradient(#3ACCE1, #665DFE);
+  display: inline-block;
+  padding: 5px;
+  margin-right: 25px;
+  transform: translateY(200px);
+  transition: transform 1s cubic-bezier(0.46, 1.48, 0.18, 0.81);
+}
+
+.card:hover .connection {
+  transform: translateY(0px);
+}
+
+.info {
+  font-family: "rubik", sans-serif;
+  padding-left: 20px;
+  transform: translateY(250px);
+  transition: transform 1s cubic-bezier(0.31, 1.21, 0.64, 1.02);
+}
+
+.card:hover .info {
+  transform: translateY(0px);
+}
+
+.name {
+  font-size: 25px;
+  font-weight: bolder;
+  padding-top: 3px;
   color: #fff;
-  font-size: 28px;
-  font-family: "Rubik", sans-serif;
+}
+
+.job {
+  margin-top: 10px;
+  color: #fff;
+}
+
+.connection.facebook {
+  height: 50px;
+  width: 50px;
+  margin-left: 20px;
+  padding: 0px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.connection.twitter {
+  transition-delay: 0.06s;
+  height: 50px;
+  width: 50px;
+  margin-left: 20px;
+  padding: 0px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.connection.behance {
+  transition-delay: 0.12s;
+  height: 50px;
+  width: 50px;
+  margin-left: 20px;
+  padding: 0px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.connection.facebook .icon {
+  height: 30px;
+  width: 30px;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.connection.twitter .icon {
+  height: 30px;
+  width: 30px;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.connection.behance .icon {
+  height: 30px;
+  width: 30px;
+  background-position: center;
+  background-size: cover;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.connection.facebook .icon {
+  background-image: url(./imagenes/html5-brands.svg);
+}
+
+.connection.twitter .icon {
+  background-image: url(./imagenes/css3-alt-brands.svg);
+}
+
+.connection.behance .icon {
+  background-image: url(./imagenes/bootstrap-brands.svg);
+}
+
+.card {
+  background-image: url(./imagenes/capri.jpeg);
 }
 
 /* FIN ACERCA DE MI */
@@ -546,7 +853,8 @@ ul {
   font-family: "Rubik", sans-serif;
 }
 .reporte .imagenuopi {
-  padding-top: 50px;
+  width: 100%;
+  padding-top: 80px;
   background-color: #051829;
 }
 
@@ -577,14 +885,14 @@ ul {
 
 .img-prot:hover {
   transition: 0.5s;
-  box-shadow: 0 0 20px #ff2bc2;
+  box-shadow: 0 0 20px #FE4F9A;
 }
 
 .gotoup {
   position: fixed;
   width: 50px;
   height: 50px;
-  background: #5873FF;
+  background: linear-gradient(#3ACCE1, #665DFE);
   bottom: 90px;
   text-decoration: none;
   text-align: center;
@@ -598,7 +906,7 @@ ul {
 .gotoup:hover {
   color: white;
   transition: linear 0.5s;
-  box-shadow: 0 0 20px #5873FF;
+  box-shadow: 0 0 20px #665DFE;
   width: 60px;
   height: 60px;
   bottom: 80px;
@@ -608,168 +916,4 @@ ul {
   font-size: 25px;
 }
 
-/* FIN REPORTE */
-/*
-.background {
-    position: absolute;
-    top: -40px;
-    left: -40px;
-    height: 120%;
-    width: 120%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    -webkit-filter: blur(30px);
-    filter: blur(30px);
-}*/
-.card {
-  border-radius: 8px;
-  height: 500px;
-  width: 400px;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  margin: auto;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  box-shadow: 0 0 90px -10px black;
-  overflow: hidden;
-}
-
-.card-blur {
-  height: 100%;
-  width: calc(100% + 1px);
-  background-color: black;
-  opacity: 0;
-  transition: opacity 0.15s ease-in;
-}
-
-.card:hover .card-blur {
-  opacity: 0.6;
-}
-
-.footer {
-  z-index: 1;
-  position: absolute;
-  height: 80px;
-  width: 100%;
-  bottom: 0;
-}
-
-svg#curve {
-  position: absolute;
-  fill: #0a141d;
-  left: 0;
-  bottom: 0;
-  width: 400px;
-  height: 450px;
-}
-
-.connections {
-  height: 80px;
-  width: 400px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 100px;
-  margin: auto;
-}
-
-.connection {
-  height: 25px;
-  width: 25px;
-  border-radius: 100%;
-  background-color: #5873FF;
-  display: inline-block;
-  padding: 5px;
-  margin-right: 25px;
-  transform: translateY(200px);
-  transition: transform 1s cubic-bezier(0.46, 1.48, 0.18, 0.81);
-}
-
-.card:hover .connection {
-  transform: translateY(0px);
-}
-
-.info {
-  font-family: "Rubik", sans-serif;
-  padding-left: 25px;
-  transform: translateY(250px);
-  color: #fff;
-  transition: transform 1s cubic-bezier(0.31, 1.21, 0.64, 1.02);
-}
-
-.card:hover .info {
-  transform: translateY(0px);
-}
-
-.name {
-  padding-top: 5px;
-}
-
-.job {
-  margin-top: 10px;
-}
-
-.connection.github {
-  height: 35px;
-  width: 35px;
-  margin-left: 20px;
-  padding: 0px;
-  border-radius: 100%;
-  overflow: hidden;
-}
-
-.connection.twitter {
-  transition-delay: 0.06s;
-}
-
-.connection.behance {
-  transition-delay: 0.12s;
-}
-
-.connection.github .icon {
-  height: 100%;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  background-color: black;
-}
-
-.connection.twitter .icon {
-  height: 18px;
-  width: 18px;
-  margin-top: 4px;
-  margin-left: 4px;
-  background-position: center;
-  background-size: cover;
-}
-
-.connection.behance .icon {
-  height: 18px;
-  width: 18px;
-  margin-top: 3px;
-  margin-left: 4px;
-  background-position: center;
-  background-size: cover;
-}
-
-.connection.github .icon {
-  background-image: url(./imagenes/github.svg);
-}
-
-.card {
-  background-image: url(./imagenes/capri.jpeg);
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.falta {
-  font-size: 70px;
-  color: #fff;
-  padding-top: 50px;
-  border: solid 2px red;
-  margin-top: 50px;
-}/*# sourceMappingURL=estilos.css.map */
+/* FIN REPORTE *//*# sourceMappingURL=estilos.css.map */

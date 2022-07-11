@@ -12,7 +12,9 @@
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>UOPI</title>
+    
 </head>
 <body>
     
@@ -46,44 +48,65 @@
         </div>
     </nav>
     <!-- Fin Barra de navegacion -->
-
-    
-
-    
-<div id="curve" class="card">
-    <div class="footer">
-        <div class="connections">
-            <div class="connection github"><div class="icon"></div></div>
-            <div class="connection twitter"><div class="icon"></div></div>
-            <div class="connection behance"><div class="icon"></div></div>
-        </div>
-        <svg id="curve">
-            <path id="p" d="M0,200 Q80,100 400,200 V150 H0 V50" transform="translate(0 300)" />
-            <rect id="dummyRect" x="0" y="0" height="450" width="400"
-		  fill="transparent" />
-            <!-- slide up-->
-            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,100 400,50 V150 H0 V50" fill="freeze" begin="dummyRect.mouseover" end="dummyRect.mouseout" dur="0.1s" id="bounce1" />
-            <!-- slide up and curve in -->
-            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,0 400,50 V150 H0 V50" fill="freeze" begin="bounce1.end" end="dummyRect.mouseout" dur="0.15s" id="bounce2" />
-            <!-- slide down and curve in -->
-            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,80 400,50 V150 H0 V50" fill="freeze" begin="bounce2.end" end="dummyRect.mouseout" dur="0.15s" id="bounce3" />
-            <!-- slide down and curve out -->
-            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,45 400,50 V150 H0 V50" fill="freeze" begin="bounce3.end" end="dummyRect.mouseout" dur="0.1s" id="bounce4" />
-            <!-- curve in -->
-            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,50 400,50 V150 H0 V50" fill="freeze" begin="bounce4.end" end="dummyRect.mouseout" dur="0.05s" id="bounce5" />
-
-            <animate xlink:href="#p" attributeName="d" to="M0,200 Q80,100 400,200 V150 H0 V50" fill="freeze" begin="dummyRect.mouseout" dur="0.15s" id="bounceOut" />
-        </svg>
-        <div class="info">
-            <div class="name">Gabriel Gurrieri</div>
-            <div class="job">Desarrollador Web</div>
+<div class="contenedor-yo">
+    <div class="container-fluid">
+        <div class="row">
+            <div data-aos="fade-right" class="text-fluid contenedor-texto col-lg-6 col-md-12 col-sm-12">
+                <div class="iam">
+                    <p><b>Hello! I am...</b></p>
+                </div>    
+                <div class="text-fluid contenedor-iam">
+                
+                <ul>
+                    <li>Gabriel Gurrieri</li>
+                    <li>Web Developer</li>
+                    <li>UX/UI Designer</li>
+                </ul>
+                </div>
+                <p class="text-fluid descripcion"> Soy Tecnico Superior en Marketing y Publicidad Digital. Trabajo como Sr Product Analyst en Banco Galicia rediseñando el modelo de contactabilidad de las empresas con el banco.
+                Me considero una persona curiosa con mentalidad innovadora.
+                Actualmente me encuentro cursando la carrera de Desarrollo Full Stack en Coderhouse.
+                </p>
+            </div>
+            <div data-aos="fade-down" class="contenedor-foto col-lg-6 col-md-12 col-sm-12">
+                <div id="curve" class="card">
+                    <div class="footer">
+                        <div class="connections">
+                            <div class="connection facebook"><div class="icon"></div></div>
+                            <div class="connection twitter"><div class="icon"></div></div>
+                            <div class="connection behance"><div class="icon"></div></div>
+                        </div>
+                        <svg id="curve">
+                            <path id="p" d="M0,200 Q80,100 400,200 V150 H0 V50" transform="translate(0 300)" />
+                            <rect id="dummyRect" x="0" y="0" height="450" width="400"
+                          fill="transparent" />
+                            <!-- slide up-->
+                            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,100 400,50 V150 H0 V50" fill="freeze" begin="dummyRect.mouseover" end="dummyRect.mouseout" dur="0.1s" id="bounce1" />
+                            <!-- slide up and curve in -->
+                            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,0 400,50 V150 H0 V50" fill="freeze" begin="bounce1.end" end="dummyRect.mouseout" dur="0.15s" id="bounce2" />
+                            <!-- slide down and curve in -->
+                            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,80 400,50 V150 H0 V50" fill="freeze" begin="bounce2.end" end="dummyRect.mouseout" dur="0.15s" id="bounce3" />
+                            <!-- slide down and curve out -->
+                            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,45 400,50 V150 H0 V50" fill="freeze" begin="bounce3.end" end="dummyRect.mouseout" dur="0.1s" id="bounce4" />
+                            <!-- curve in -->
+                            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,50 400,50 V150 H0 V50" fill="freeze" begin="bounce4.end" end="dummyRect.mouseout" dur="0.05s" id="bounce5" />
+                
+                            <animate xlink:href="#p" attributeName="d" to="M0,200 Q80,100 400,200 V150 H0 V50" fill="freeze" begin="dummyRect.mouseout" dur="0.15s" id="bounceOut" />
+                        </svg>
+                        <div class="info">
+                            <div class="name">Gabriel Gurrieri</div>
+                            <div class="job">Buenos Aires - Argentina</div>
+                        </div>
+                    </div>
+                    <div class="card-blur"></div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="card-blur"></div>
+
 </div>
-<div class="falta text-center text-fluid">
-<h1>FALTA DISEñO!!</h1>
-</div>
+
+
     <!-- Inicio footer -->
     <footer>
         <div class="container-fluid foot pt-5">
@@ -140,6 +163,10 @@
     </footer>
 
     <!-- Fin footer -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
