@@ -413,10 +413,10 @@ footer .mapa h3 {
 }
 
 .cuadro-beneficio .emoji {
-  width: 150px;
   font-size: 50px;
   color: #ffffff;
-  padding: 30px;
+  margin: 30px;
+  padding-right: 10px;
 }
 
 .contenedor-q {
@@ -430,11 +430,26 @@ footer .mapa h3 {
 .textos p {
   font-size: 16px;
   color: #fff;
-  padding-left: 10px;
+  padding-right: 10px;
   padding-right: 20px;
 }
 
 .ahorro h3 {
+  font-size: 28px;
+  color: #fff;
+}
+
+.tiempo h3 {
+  font-size: 28px;
+  color: #fff;
+}
+
+.comodidad h3 {
+  font-size: 28px;
+  color: #fff;
+}
+
+.seguridad h3 {
   font-size: 28px;
   color: #fff;
 }

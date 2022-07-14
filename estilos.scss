@@ -462,10 +462,11 @@ footer {
 }
 
 .cuadro-beneficio .emoji {
-    width: 150px;
+  
     font-size: 50px;
     color: #ffffff;
-    padding: 30px;
+    margin: 30px;
+    padding-right: 10px;
 }
 
 .contenedor-q {
@@ -477,17 +478,32 @@ footer {
 
 }
 
+
 .textos p {
     font-size: 16px;
     color: $colortextos;
-    padding-left: 10px;
+    padding-right: 10px;
     padding-right: 20px;
 }
 
 .ahorro h3 {
     font-size: $h3;
     color: $colortextos;
+}
 
+.tiempo h3 {
+    font-size: $h3;
+    color: $colortextos;
+}
+
+.comodidad h3 {
+    font-size: $h3;
+    color: $colortextos;
+}
+
+.seguridad h3 {
+    font-size: $h3;
+    color: $colortextos;
 }
 
 .box-1 {
